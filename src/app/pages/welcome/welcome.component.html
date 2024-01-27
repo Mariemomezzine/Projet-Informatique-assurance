@@ -1,0 +1,30 @@
+
+<nz-table #basicTable [nzData]="forexData">
+  <thead>
+    <tr>
+      <th>Currency Pair</th>
+      <th>Timestamp</th>
+      <th>Bid Price</th>
+      <th>Mid Price</th>
+      <th>Ask Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let currency of basicTable.data">
+      <td><a [routerLink]="['/historical-data', currency.instrument]">
+        {{ currency.instrument }}
+      </a></td>
+      <td>{{ currency.timestamp }}</td>
+      <td>{{ currency.bid }}</td>
+      <td>{{ currency.mid }}</td>
+      <td>{{ currency.ask }}</td>
+      <td>
+        <button nz-button nzType="default">Trade</button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+
+

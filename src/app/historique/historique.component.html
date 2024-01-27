@@ -1,0 +1,24 @@
+
+<nz-table #basicTable [nzData]="historicalData">
+  <thead>
+    <tr>
+      <th>date</th>
+      <th>open</th>
+      <th>high</th>
+      <th>low </th>
+      <th>close</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+
+      <td>{{ data.date }}</td>
+      <td>{{ data.open }}</td>
+      <td>{{ data.high }}</td>
+      <td>{{ data.low }}</td>
+      <td>{{ data.close }}</td>
+
+    </tr>
+  </tbody>
+</nz-table>
